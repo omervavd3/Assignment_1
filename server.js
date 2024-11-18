@@ -17,7 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //mongo connection
 
 //routes
+const postsRouter = require("./routes/posts_routes");
+app.use("/posts", postsRouter);
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
