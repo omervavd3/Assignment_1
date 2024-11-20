@@ -2,6 +2,10 @@
 GET http://localhost:3000/posts
 
 ###
+//get all posts by sender
+GET http://localhost:3000/posts?sender=Omer
+
+###
 
 //create a post
 POST http://localhost:3000/posts
@@ -16,4 +20,14 @@ content-type: application/json
 
 //get post by ID
 GET http://localhost:3000/posts/1234
+
+###
+
+//update post by ID
+PUT http://localhost:3000/posts/1234
+content-type: application/json
+
+{
+    "updatedPost": "Updated post content"
+}
 
