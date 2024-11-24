@@ -21,5 +21,5 @@ const postsRouter = require("./routes/posts_routes");
 app.use("/posts", postsRouter);
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://localhost:${port||3000}`);
 });
