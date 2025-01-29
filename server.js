@@ -1,6 +1,7 @@
 //env
 const dotenv = require("dotenv").config();
 const port = process.env.PORT;
+const uri = process.env.MONGO_URI;
 
 //express
 const express = require("express");
@@ -15,7 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //mongo connection
-
+const db = uri;
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log(err));
 //routes
 const postsRouter = require("./routes/posts_routes");
 app.use("/posts", postsRouter);

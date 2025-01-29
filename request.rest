@@ -12,22 +12,28 @@ POST http://localhost:3000/posts
 content-type: application/json
 
 {
-    "name": "Test Name",
-    "post": "Testing post"
+    "title" : "Post title",
+    "content" : "Post content",
+    "owner" : "Omer"
 }
 
 ###
 
 //get post by ID
-GET http://localhost:3000/posts/1234
+GET http://localhost:3000/posts/679a3558aef17e57dfd9e786
 
 ###
 
 //update post by ID
-PUT http://localhost:3000/posts/1234
+PUT http://localhost:3000/posts/679a35d7aef17e57dfd9e7a1
 content-type: application/json
 
 {
-    "updatedPost": "Updated post content"
+    "title" : "Updated post title",
+    "content" : "Updated post content"
 }
 
+###
+
+//delete post by ID
+DELETE http://localhost:3000/posts/679a35d7aef17e57dfd9e7a1
