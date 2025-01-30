@@ -34,6 +34,10 @@ const getPostById = async (req, res) => {
   try {
     const postId = req.params.postId;
     const post = await postModel.findById(postId);
+    if(!post){
+      res.status(404).send("Post not found");
+      return
+    }
     res.status(200).send(post);
     return;
   } catch (error) {

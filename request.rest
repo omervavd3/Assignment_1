@@ -14,26 +14,26 @@ content-type: application/json
 {
     "title" : "Post title",
     "content" : "Post content",
-    "owner" : "Omer"
+    "owner" : "Guy"
 }
 
 ###
 
 //get post by ID
-GET http://localhost:3000/posts/679a3558aef17e57dfd9e786
+GET http://localhost:3000/posts/479b845fd4c161f6074aba39
 
 ###
 
 //update post by ID
-PUT http://localhost:3000/posts/679a35d7aef17e57dfd9e7a1
+PUT http://localhost:3000/posts/679b83cfd4c161f6074aba21
 content-type: application/json
 
 {
-    "title" : "Updated post title",
+    "title" : "Updated posghjkt title",
     "content" : "Updated post content"
 }
 
 ###
 
 //delete post by ID
-DELETE http://localhost:3000/posts/679a35d7aef17e57dfd9e7a1
+DELETE http://localhost:3000/posts/679b8400d4c161f6074aba2c
